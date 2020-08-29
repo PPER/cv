@@ -40,10 +40,24 @@
     \setlength{\parsep}{0pt}     }
 { \end{itemize}                  } 
 
+\setlist[2]{\itemsep -0.5em}
 \newcommand{\rrsection}[5]{%  
- {\textbf{#1}, }{\textit{#2}, }{#3} \hfill {#4\\} {#5}
+ {\textbf{#1}, }{\textit{#2},} {#3}\hfill{#4} \noindent
+  \begin{list}{$\cdot$}{\leftmargin=1em}
+   \itemsep -0.5em \vspace{-0.5em} 
+  #5
+  \end{list}
+  %\vspace{0.5em} 
+}
 
-  }
+\newcommand{\project}[4]{%  
+ {\textbf{#1}, }{\textit{#2}} \hfill{#3} \noindent
+  \begin{list}{$\cdot$}{\leftmargin=1em}
+   \itemsep -0.5em \vspace{-0.5em} 
+  #4
+  \end{list}
+  %\vspace{0.5em} 
+}
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -68,52 +82,46 @@
 \end{rSection}
 
 \begin{rSection}{SKILLS}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Front-end skills: & Proficient in HTML/CSS/Javascript, Bootstrap; experience in jQuery, vue.js.\\
-Back-end skills: & Proficient in C/C++, Python (Django); experience in PHP, nginx, uwsgi, Apache.  \\
-Database skills: & Experience in MySQL.
-\end{tabular}
-
+Proficient in OCaml, ReasoML, C/C++, HTML/CSS/Javascript; Experience in jQuery, vue.js, Python (Django), nginx.
 \end{rSection}
 %--------------------------------------------------------------------------------
 %    Projects And Seminars
 %-----------------------------------------------------------------------------------------------
   
 \begin{rSection}{RESEARCH EXPERIENCE}
-\begin{rrsection}{Research Assistant}{prof. Cyrus Omar}{University of Michigan - Future of Programming Lab}{ Nov. 2019 - present}
+\rrsection{Research Assistant}{prof. Cyrus Omar}{University of Michigan - Future of Programming Lab}{ Nov. 2019 - present}{
   \item Worked on a paper for a gradual bidirectional typing inference system - type hole inference. 
   \item Developed undo/redo and history recording features for Hazel, a live functional programming environment featuring typed holes.
   \item Designed and implemented a history panel, which was used for EECS 490 teaching work in UM. 
-\end{rrsection}	
-\begin{rrsection}{Research Assistant}{prof. Scott Mahlke}{University of Michigan}{ May 2020 - Jul. 2020}
+}
+	
+\rrsection{Research Assistant}{prof. Scott Mahlke}{University of Michigan}{ May 2020 - Jul. 2020}{
 \item Learnt and wrote optimization path by LLVM.
   \item Implemented genetic algorithm to find optimized combination of flags for gcc.
-\end{rrsection}	
+}	
 \end{rSection}
-\begin{rSection}{ENGINEERING EXPERIENCE}
 
-\begin{rrsection}{Course Project}{Compiler for Decaf}{EECS 483
-  Compiler Construction}{2019 Winter}
-  Implemented and optimized a compiler for Decaf (a strongly-typed, object-oriented language with support for inheritance and
-encapsulation), written in C++ and compiled Decaf program into MIPS assembly program.
-  \item Implemented a full-stack compiler from lexical analyzing to code generation with clear static, link and run-time error reporting.
+\begin{rSection}{PROJECTS}
+
+\project{Compiler for Decaf}{EECS 483
+  Compiler Construction}{2019 Winter}{
+  \item Implemented a full-stack compiler for Decaf from lexical analyzing to code generation with clear static, link and run-time error reporting.
+  \item wrote in C++ and compiled Decaf program into MIPS assembly program.
   \item Optimized compiler by register allocation improvement, dead code elimination, constant folding, subexpression elimination, constant propagation and forward copy propagation.
+}
 
-\end{rrsection}
 
-\begin{rrsection}{Course Project}{Network File System}{EECS 482
-  Operating System}{2019 Winter}
+\project{Network File System}{EECS 482
+  Operating System}{2019 Winter}{
   \item Implemented a file system featuring encryption, authentication, failure tolerance and concurrency.
-\end{rrsection}
+}
 
-\begin{rrsection}{Lead Programmer}{Online Visual Novel}{SJTU Network and Information Organization}{February 2019 - May 2019}
-
+\project{Online Visual Novel}{SJTU Network and Information Organization}{February 2019 - May 2019}{
 	\item Implemented a visual novel featuring multiple story lines and endings, shopping store, archiving, achievement, HP systems.
-
   \item Designed and built front-end pages (Html/CSS/JS).
   \item Developed the back-end by Django, created database model and deployed it in the cloud server (Ubuntu).
   \item Revised it into a light framework and released on github.
-\end{rrsection}
+}
 
 %\vspace{-0.3\baselineskip}
 
@@ -125,18 +133,18 @@ encapsulation), written in C++ and compiled Decaf program into MIPS assembly pro
 
 \begin{rSection}{ACADEMIC EXPERIENCE}
 
-\begin{rrsection}{Instructional Aide (IA)}{EECS 490 Programming Languages}{University
-  of Michigan}{2020 Fall}
+\rrsection{Instructional Aide}{EECS 490 Programming Languages}{University
+  of Michigan}{2020 Fall}{
   \item 250-student upper level technical elective course
   \item duties including holding office hours and lab teaching
-\end{rrsection}
+}
 
-\begin{rrsection}{Author}{ICFP 2020}{Student Research Competition Track}{Aug. 2020}
+\rrsection{Author}{ICFP 2020}{Student Research Competition Track}{Aug. 2020}{
   \item Won bronze medal in the student research competition.
   \item Submitted an extended abstract, \textit{Type Hole Inference}.
   \item Participated in the poster session and communicated with ICFPers.
   \item Made a presentation on the final talk session.
-\end{rrsection}
+}
 
 \end{rSection}
 
@@ -148,11 +156,6 @@ encapsulation), written in C++ and compiled Decaf program into MIPS assembly pro
 
 \award{Bronze}{ICFP 2020}{Student Research Competition}{Aug. 2020}
 \award{Champion}{12th Annual VEX U Robot Skills Challenge World Championship}{Louisville}{Apr. 2019}
-Over 30,000 people including more than 1,650 teams from 40 nations participated.
-\begin{itemize}
-  \item Designed and constructed over 5 versions of robots for competitions with other 8 teammates. 
-	\item Wrote daily work log and engineering sheets for the team.
- \end{itemize} 
 \award{Second Place}{12th Annual VEX U Robot World Championship}{Louisville}{Apr. 2019}
 \award{Champion}{VEX Robotics Asia Open}{Ningbo, Zhejiang}{Feb. 2019}
 \award{Robot Awards}{Summer Design Expo Best Technology Award}{UM-SJTU JI}{Nov. 2018}
