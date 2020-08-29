@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\newcommand{\award}[4]{{\textbf{#1}, }{\textit{#2}, }{#3} \hfill{#4}\\}
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.6in,top=0.45in,right=0.6in,bottom=0.45in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+  \name{\LARGE Zhiyi(Zoe) Pan} % Your name
+\address{1929 Plymouth Rd, Apt 5033, Ann Arbor, MI, 48105} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{1(734)881-5522  \\ panzhiyi1917@gmail.com}
+% Your phone number and email
+\usepackage{lipsum} % for dummy text
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+\newcommand{\rrsection}[5]{%  
+ {\textbf{#1}, }{\textit{#2}, }{#3} \hfill {#4\\} {#5}
+
+  }
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf University of Michigan, Ann Arbor, MI} \hfill {Aug. 2019 - May. 2021} 
+\\ Bachelor of Computer Science
+\\ \textit{Selected Coursework}: Advanced Compilers; Program Synthesis; Introduction to Operating Systems; Compiler Construction; Programming Languages; 
+ \hfill { GPA: 3.84}
+%\\ Department of Structural Engineering\\
+\\{\bf Shanghai Jiao Tong University, Shanghai} \hfill {Sept. 2017 - May. 2021} 
+\\Bachelor of Electronic and Computer Engineering 
+ \hfill { GPA: 3.55}
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{rSection}
+
+\begin{rSection}{SKILLS}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Front-end skills: & Proficient in HTML/CSS/Javascript, Bootstrap; experience in jQuery, vue.js.\\
+Back-end skills: & Proficient in C/C++, Python (Django); experience in PHP, nginx, uwsgi, Apache.  \\
+Database skills: & Experience in MySQL.
+\end{tabular}
+
+\end{rSection}
+%--------------------------------------------------------------------------------
+%    Projects And Seminars
+%-----------------------------------------------------------------------------------------------
+  
+\begin{rSection}{RESEARCH EXPERIENCE}
+\begin{rrsection}{Research Assistant}{prof. Cyrus Omar}{University of Michigan - Future of Programming Lab}{ Nov. 2019 - present}
+  \item Worked on a paper for a gradual bidirectional typing inference system - type hole inference. 
+  \item Developed undo/redo and history recording features for Hazel, a live functional programming environment featuring typed holes.
+  \item Designed and implemented a history panel, which was used for EECS 490 teaching work in UM. 
+\end{rrsection}	
+\begin{rrsection}{Research Assistant}{prof. Scott Mahlke}{University of Michigan}{ May 2020 - Jul. 2020}
+\item Learnt and wrote optimization path by LLVM.
+  \item Implemented genetic algorithm to find optimized combination of flags for gcc.
+\end{rrsection}	
+\end{rSection}
+\begin{rSection}{ENGINEERING EXPERIENCE}
+
+\begin{rrsection}{Course Project}{Compiler for Decaf}{EECS 483
+  Compiler Construction}{2019 Winter}
+  Implemented and optimized a compiler for Decaf (a strongly-typed, object-oriented language with support for inheritance and
+encapsulation), written in C++ and compiled Decaf program into MIPS assembly program.
+  \item Implemented a full-stack compiler from lexical analyzing to code generation with clear static, link and run-time error reporting.
+  \item Optimized compiler by register allocation improvement, dead code elimination, constant folding, subexpression elimination, constant propagation and forward copy propagation.
+
+\end{rrsection}
+
+\begin{rrsection}{Course Project}{Network File System}{EECS 482
+  Operating System}{2019 Winter}
+  \item Implemented a file system featuring encryption, authentication, failure tolerance and concurrency.
+\end{rrsection}
+
+\begin{rrsection}{Lead Programmer}{Online Visual Novel}{SJTU Network and Information Organization}{February 2019 - May 2019}
+
+	\item Implemented a visual novel featuring multiple story lines and endings, shopping store, archiving, achievement, HP systems.
+
+  \item Designed and built front-end pages (Html/CSS/JS).
+  \item Developed the back-end by Django, created database model and deployed it in the cloud server (Ubuntu).
+  \item Revised it into a light framework and released on github.
+\end{rrsection}
+
+%\vspace{-0.3\baselineskip}
+
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{ACADEMIC EXPERIENCE}
+
+\begin{rrsection}{Instructional Aide (IA)}{EECS 490 Programming Languages}{University
+  of Michigan}{2020 Fall}
+  \item 250-student upper level technical elective course
+  \item duties including holding office hours and lab teaching
+\end{rrsection}
+
+\begin{rrsection}{Author}{ICFP 2020}{Student Research Competition Track}{Aug. 2020}
+  \item Won bronze medal in the student research competition.
+  \item Submitted an extended abstract, \textit{Type Hole Inference}.
+  \item Participated in the poster session and communicated with ICFPers.
+  \item Made a presentation on the final talk session.
+\end{rrsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Awards}   
+
+\award{Bronze}{ICFP 2020}{Student Research Competition}{Aug. 2020}
+\award{Champion}{12th Annual VEX U Robot Skills Challenge World Championship}{Louisville}{Apr. 2019}
+Over 30,000 people including more than 1,650 teams from 40 nations participated.
+\begin{itemize}
+  \item Designed and constructed over 5 versions of robots for competitions with other 8 teammates. 
+	\item Wrote daily work log and engineering sheets for the team.
+ \end{itemize} 
+\award{Second Place}{12th Annual VEX U Robot World Championship}{Louisville}{Apr. 2019}
+\award{Champion}{VEX Robotics Asia Open}{Ningbo, Zhejiang}{Feb. 2019}
+\award{Robot Awards}{Summer Design Expo Best Technology Award}{UM-SJTU JI}{Nov. 2018}
+\award{Scholarship}{Undergraduate Excellent Scholarship}{Shanghai Jiao Tong University}{2017-2018}
+\end{rSection}
+
+
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
